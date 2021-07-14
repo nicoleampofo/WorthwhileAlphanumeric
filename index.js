@@ -23,3 +23,19 @@ function checkImposterSyndrome(str){
 
 checkImposterSyndrome("I am not ready to go")
 
+// Create a CamelCase Method where all words must have their first letter capitalized without spaces.
+
+// For instance:
+
+// "hello case" => "HelloCase"
+// "camel case word" => "CamelCaseWord"
+
+function camelCase(str){
+  let newStr = str.toLowerCase()
+  return newStr.split(" ").map(el => el.charAt(0).toUpperCase() + el.slice(1)).join("")  
+}
+
+
+console.log(camelCase("hello world"))
+console.log(camelCase("camel case word"))
+console.log(camelCase("caMel casE wOrd"))
